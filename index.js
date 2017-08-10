@@ -8,7 +8,7 @@ document.getElementById("navMenu").innerHTML =
             "</div>" +
             "<ul class='nav navbar-nav'>" +
                 "<li class='first-item active'><a href='../index.html'>Developer Samples Home</a></li>" +
-                "<li class='second-item'><a href='JavascriptEmbed/view.html'>JavaScript Embed</a></li>" +
+                "<li class='second-item'><a href='JavascriptEmbed/embed-demo.html'>JavaScript Embed</a></li>" +
                 "<li class='third-item dropdown'>" +
                     "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>Display Samples" +
                     "<span class='caret'></span></a>" +

@@ -1,0 +1,12 @@
+{
+  "name": "whenhub-samples",
+  "version": "0.0.1",
+  "description": "WhenHub",
+  "scripts": {
+    "start": "http-server -p 8000 --cors"
+  },
+  "author": "WhenHub",
+  "devDependencies": {
+    "http-server": "latest"
+  }
+}
