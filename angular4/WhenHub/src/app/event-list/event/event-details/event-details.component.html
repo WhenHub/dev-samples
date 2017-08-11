@@ -1,0 +1,30 @@
+<div class="nav-row row">
+  <div class="col-md-12">
+    <a (click)="goBack()" class="btn btn-warning">Go Back</a>
+  </div>
+</div>
+<div class="header row">
+  <div class="col-md-12">
+    <a *ngIf="!editMode" class="float-right btn btn-info" (click)="editMode = true">Edit</a>
+    <a *ngIf="editMode" class="float-right btn btn-link" (click)="editMode = false">Cancel</a>
+    <a *ngIf="editMode" class="float-right btn btn-success" (click)="saveEvent()">Save</a>
+    <h2 *ngIf="!editMode">{{eventName}}</h2>
+    <input *ngIf="editMode" [(ngModel)]="eventName" name="eventName" />
+    <h3 *ngIf="!editMode">{{startDate | date: 'MMMM dd, yyyy hh:mm Z'}}
+      <span *ngIf="endDate"> -  {{endDate | date: 'MMMM dd, yyyy hh:mm Z'}}</span></h3>
+  </div>
+</div>
+<div class="row">
+  <div *ngIf="!editMode" class="col-md-12" [innerHTML]="eventDescription"></div>
+
+    <textarea *ngIf="editMode" class="col-md-12" [(ngModel)]="eventDescription" ></textarea>
+
+</div>
+<div class="media-items row">
+    <app-media-item
+      [media]="mediaEl"
+      *ngFor="let mediaEl of media"
+      class="col-lg-3"
+      [ngClass]="{hide: mediaEl.type !== 'image'}"
+    ></app-media-item>
+</div>

@@ -1,0 +1,29 @@
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+.card,
+.btn {
+  cursor: pointer;
+}
+.card {
+  margin-bottom:20px;
+  height: calc(100% - 20px);
+}
+.row {
+  margin-bottom: 20px;
+}
+.hide {
+  display: none;
+}
+.nav-row {
+  margin-top: 20px;
+}
+
+app-schedule-list {
+  display: block;
+  margin:20px 0 60px;
+}

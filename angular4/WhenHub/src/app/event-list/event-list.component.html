@@ -1,0 +1,21 @@
+<div class="nav-row row">
+  <div class="col-md-12">
+    <a (click)="goBack()" class="btn btn-warning">Go Back</a>
+  </div>
+</div>
+<div class="header row">
+  <div class="col-md-12">
+    <a *ngIf="!editMode" class="float-right btn btn-info" (click)="editMode = true">Edit</a>
+    <a *ngIf="editMode" class="float-right btn btn-link" (click)="editMode = false">Cancel</a>
+    <a *ngIf="editMode" class="float-right btn btn-success" (click)="updateSchedule()">Save</a>
+    <input *ngIf="editMode" type="text" id="scheduleName" [(ngModel)]="scheduleName" name="scheduleName"/>
+    <h2 *ngIf="!editMode">{{scheduleName}}</h2>
+  </div>
+</div>
+<div class="row">
+  <app-event
+    class="col-sm-4"
+    [event]="eventEl"
+    [schedule]="schedule"
+    *ngFor="let eventEl of events"></app-event>
+</div>

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="../../assets/WhenHub-Logo-Text.png" width="150"/></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!--<ul class="navbar-nav mr-auto">-->
+        <!--<li class="nav-item active">-->
+          <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+        <!--</li>-->
+        <!--<li class="nav-item">-->
+          <!--<a class="nav-link" href="#">Link</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+      <ul *ngIf="false" class="nav navbar-nav navbar-right">
+        <li class="dropdown" [ngClass]="{open: openLogin === true}">
+          <a class="dropdown-toggle nav-link" data-toggle="dropdown" (click)="openLogin = !openLogin"><b>Apply Access Token</b> <span class="caret"></span></a>
+          <ul id="login-dp" class="dropdown-menu">
+            <li>
+              <div class="row">
+                <div class="col-md-12">
+                  <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                    <div class="form-group">
+                      <label class="sr-only" for="accessToken">Access Token</label>
+                      <input class="form-control" type="text" id="accessToken" [(ngModel)]="sharedService.accessToken" placeholder="Access Token" name="accessToken"/>
+                    </div>
+                  </form>
+                </div>
+                <div class="bottom text-center">
+                  Find your access token in <a href="https://studio.whenhub.com/account" target="_blank"><b>Studio by WhenHub</b></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

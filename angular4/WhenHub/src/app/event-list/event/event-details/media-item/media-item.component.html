@@ -1,0 +1,5 @@
+<div class="card"
+  *ngIf="media.type === 'image'">
+  <img *ngIf="media.type === 'image'" [src]="media.url" />
+  <h5 *ngIf="media.type === 'image' && media.name">{{media.name}}</h5>
+</div>

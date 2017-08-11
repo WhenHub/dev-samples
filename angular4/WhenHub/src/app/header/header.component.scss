@@ -1,0 +1,38 @@
+#login-dp{
+  min-width: 350px;
+  padding: 14px 14px 0;
+  overflow:hidden;
+  background-color:rgba(255,255,255,.8);
+}
+a:not([href]):not([tabindex]) {
+  color:#fff;
+  cursor: pointer;
+}
+#login-dp .help-block{
+  font-size:12px
+}
+#login-dp .bottom{
+  background-color:rgba(255,255,255,.8);
+  border-top:1px solid #ddd;
+  clear:both;
+  padding:14px;
+}
+#login-dp .form-group {
+  margin-bottom: 10px;
+}
+.open>.dropdown-menu {
+  display: block;
+}
+.navbar-right .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+.navbar-nav>li>.dropdown-menu {
+  margin-top: 7px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.navbar-nav>li>a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
