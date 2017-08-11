@@ -14,11 +14,17 @@ xhr.addEventListener("readystatechange", function () {
     console.log(jsonResponse);
 
     for (i = 0; i < jsonResponse.length; i++) {
-        $('.schedules').append(
-            '<div>' + jsonResponse[i].name +
-            '</div>'
+        if(i == 0) {        
+            $('.nav').append(
+                    '<li class="active"><a href="#">' + jsonResponse[i].name + '</a></li>'
+                );
+        }else {
+            $('.nav').append(
+                    '<li><a href="#">' + jsonResponse[i].name + '</a></li>'
+            );
 
-        );
+
+        }
     }
 
 
