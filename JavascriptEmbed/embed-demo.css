@@ -2,6 +2,11 @@
     margin-left: 140px;
 }
 
+.header-description {
+    margin-left: 140px;
+    margin-bottom: 10px;
+}
+
 #test {
     height: 554px !important;
     width: 80% !important;
