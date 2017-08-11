@@ -15,11 +15,11 @@ xhr.addEventListener("readystatechange", function () {
 
     for (i = 0; i < jsonResponse.length; i++) {
         if(i == 0) {        
-            $('.nav').append(
+            $('.nav-tabs').append(
                     '<li class="active"><a href="#">' + jsonResponse[i].name + '</a></li>'
                 );
         }else {
-            $('.nav').append(
+            $('.nav-tabs').append(
                     '<li><a href="#">' + jsonResponse[i].name + '</a></li>'
             );
 
@@ -33,7 +33,7 @@ xhr.addEventListener("readystatechange", function () {
 });
 
 xhr.open("GET", "https://api.whenhub.com/api/users/me/schedules");
-xhr.setRequestHeader("authorization", "ACCESS_TOKEN");
+xhr.setRequestHeader("authorization", "EcxdSYSXjXN0AOxoywC1iINGHygyWsdOtSr5gB8Mr06Oazx1fiQcdmFJbPsR62ig");
 
 xhr.send(data);
 
