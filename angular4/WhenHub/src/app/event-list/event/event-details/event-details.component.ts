@@ -63,7 +63,6 @@ export class EventDetailsComponent implements OnInit {
   }
 
   saveEvent() {
-    // TODO: Save Event
     this.event.name = this.eventName;
     this.editMode = false;
     this.event.description = this.eventDescription;

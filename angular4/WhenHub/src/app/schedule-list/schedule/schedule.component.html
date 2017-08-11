@@ -8,7 +8,7 @@
     <h4 class="card-title">{{ schedule.name }}</h4>
     <p class="card-text">{{ schedule.desc }}</p>
   </div>
-  <div class="card-footer">
-    <small class="text-muted"><a (click)="goWhencast(schedule.id)">View Whencast for this schedule</a> </small>
+  <div class="card-footer" (click)="goWhencast(schedule.id)">
+    <small class="text-muted"><a class="btn btn-link">View Whencast for this schedule</a> </small>
   </div>
 </div>
