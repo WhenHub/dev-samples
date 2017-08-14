@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
-    this.sharedService.accessToken = 'TzGzqljHMJZMNQNA8XBJ4u0LFLB9B5z8Z1TxRjv0sMhuhMyegcgeJA0bn3iNJoiW';
+    this.sharedService.accessToken = '<<YOUR_ACCESS_TOKEN>>';
   }
 
 }
