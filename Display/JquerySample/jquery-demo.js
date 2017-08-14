@@ -16,24 +16,44 @@ xhr.addEventListener("readystatechange", function () {
     for (i = 0; i < jsonResponse.length; i++) {
         if(i == 0) {        
             $('.nav-tabs').append(
-                    '<li class="active"><a href="#">' + jsonResponse[i].name + '</a></li>'
+                    '<li class="active"><a data-toggle="tab" href="#' + i + '">' + jsonResponse[i].name + '</a></li>'
                 );
-        }else {
-            $('.nav-tabs').append(
-                    '<li><a href="#">' + jsonResponse[i].name + '</a></li>'
+
+            $('.tab-content').append(
+
+                '<div id="' + i + '" class="tab-pane fade in active"> </div>'
+
+
             );
 
+        
+        
+        }else {
+            $('.nav-tabs').append(
+                    '<li><a data-toggle="tab" href="#' + i + '">' + jsonResponse[i].name + '</a></li>'
+            );
 
+            $('.tab-content').append(
+
+                '<div id="' + i + '" class="tab-pane fade"> </div>'
+
+
+            );
+        
         }
+
+
+
     }
 
+    
 
 
 }
 });
 
 xhr.open("GET", "https://api.whenhub.com/api/users/me/schedules");
-xhr.setRequestHeader("authorization", "EcxdSYSXjXN0AOxoywC1iINGHygyWsdOtSr5gB8Mr06Oazx1fiQcdmFJbPsR62ig");
+xhr.setRequestHeader("authorization", "Accesstoken");
 
 xhr.send(data);
 
