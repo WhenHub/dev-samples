@@ -83,7 +83,7 @@ xhr.addEventListener("readystatechange", function () {
         });
 
         xhr.open("GET", "https://api.whenhub.com/api/schedules/" + jsonResponse[i].id + "?filter%5Binclude%5D%5Bevents%5D=media");
-        xhr.setRequestHeader("authorization", "eo1Id9TYl5J143TPb4OQorm1V7DCLFXA7B5VoezqoOjgO6w9rCXdIGUNTsFM5eTr");
+        xhr.setRequestHeader("authorization", "ACCESS_TOKEN");
 
         xhr.send(scheduleMedia);
 

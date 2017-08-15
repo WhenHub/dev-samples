@@ -13,8 +13,14 @@ document.getElementById("navMenu").innerHTML =
                     "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>Display Samples" +
                     "<span class='caret'></span></a>" +
                     "<ul class='dropdown-menu'>" + 
-                        "<li class='third-a-item'><a href='#'>Angular Sample</a></li>" +
-                        "<li class='third-b-item'><a href='/Display/JquerySample/jquery-demo.html'>Jquery Sample</a></li>" +
+                        "<li class='third-a-item'><a href='/Display/JquerySample/jquery-demo.html'>Jquery Sample</a></li>" +
+                    "</ul>" +
+                "</li>" +
+                "<li class='fourth-item dropdown'>" +
+                    "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>Edit Samples" +
+                    "<span class='caret'></span></a>" +
+                    "<ul class='dropdown-menu'>" + 
+                        "<li class='fourth-a-item'><a href='#'>Angular Sample</a></li>" +
                     "</ul>" +
                 "</li>" +
             "</ul>" +
