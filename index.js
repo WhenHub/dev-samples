@@ -25,5 +25,6 @@ document.getElementById("navMenu").innerHTML =
                 "</li>" +
             "</ul>" +
         "</div>" +
-    "</nav>"
+    "</nav>" 
+
 
