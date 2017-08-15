@@ -83,6 +83,7 @@ xhr.addEventListener("readystatechange", function () {
         });
 
         xhr.open("GET", "https://api.whenhub.com/api/schedules/" + jsonResponse[i].id + "?filter%5Binclude%5D%5Bevents%5D=media");
+        // Replace "ACCESS_TOKEN" with your personal one
         xhr.setRequestHeader("authorization", "ACCESS_TOKEN");
 
         xhr.send(scheduleMedia);
