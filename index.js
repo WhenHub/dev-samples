@@ -20,14 +20,10 @@ document.getElementById("navMenu").innerHTML =
                     "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>Edit Samples" +
                     "<span class='caret'></span></a>" +
                     "<ul class='dropdown-menu'>" + 
-                        "<li class='fourth-a-item'><a href='#'>Angular Sample</a></li>" +
+                        "<li class='fourth-a-item'><a href='/edit/angularSample/angularsample-demo.html'>Angular Sample</a></li>" +
                     "</ul>" +
                 "</li>" +
             "</ul>" +
         "</div>" +
     "</nav>"
 
-// change url if in dropdown menu
-if(document.title == "Jquery Example") {
-    $('.second-item').first().attr('href', '../JavascriptEmbed/embed-demo.html');
-}
