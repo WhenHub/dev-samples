@@ -17,26 +17,42 @@ xhr.addEventListener("readystatechange", function () {
             $('.nav-tabs').append(
                     '<li class="active"><a data-toggle="tab" href="#' + i + '">' + jsonResponse[i].name + '</a></li>'
                 );
+            if (jsonResponse[i].description== undefined){
+                $('.tab-content').append(
+                    '<div id="' + i + '" class="tab-pane fade in active">'+ 
+                    '<blockquote class="small">This schedule does not have a description.</blockquote>' +
+                    '<h4>Events</h4>' + 
+                    '</div>'
+                );
 
-            $('.tab-content').append(
-
-                '<div id="' + i + '" class="tab-pane fade in active">'+ 
-                 '<blockquote>' + jsonResponse[i].description + '</blockquote>' +
-                 
-                '</div>'
-            );
-
-        }else {
+            }else{
+                $('.tab-content').append(
+                    '<div id="' + i + '" class="tab-pane fade in active">'+ 
+                    '<blockquote>' + jsonResponse[i].description + '</blockquote>' +
+                    '<h4>Events</h4>' + 
+                    '</div>'
+                );
+            }
+        }
+        else {
             $('.nav-tabs').append(
                     '<li><a data-toggle="tab" href="#' + i + '">' + jsonResponse[i].name + '</a></li>'
             );
-
-            $('.tab-content').append(
-
-                '<div id="' + i + '" class="tab-pane fade">' + 
-                '<blockquote>' + jsonResponse[i].description + '</blockquote>' +
-                '</div>'
-            );
+            if (jsonResponse[i].description== undefined){
+                $('.tab-content').append(
+                    '<div id="' + i + '" class="tab-pane fade">' + 
+                    '<blockquote class="small">This schedule does not have a description.</blockquote>' +
+                    '<h4>Events</h4>' + 
+                    '</div>'
+                );
+            }else{
+                $('.tab-content').append(
+                    '<div id="' + i + '" class="tab-pane fade">' + 
+                    '<blockquote>' + jsonResponse[i].description + '</blockquote>' +
+                    '<h4>Events</h4>' + 
+                    '</div>'
+                );
+            }
         }
 
         // Get media and details for each schedule
@@ -48,13 +64,19 @@ xhr.addEventListener("readystatechange", function () {
         xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
             var scheduleDetails = JSON.parse(this.responseText);
-            console.log($("a:contains(" + scheduleDetails.name + ")").attr('href').charAt(1));
             var index = $("a:contains(" + scheduleDetails.name + ")").attr('href').charAt(1);
             
-            for (x=0; x < scheduleDetails.events.length; x++){
+            if (scheduleDetails.events.length != 0){
+                for (x=0; x < scheduleDetails.events.length; x++){
+                    $('#' + index).append(
+                        '<p>' + (x + 1) + '. ' + scheduleDetails.events[x].name + '</p>'
+                    );
+                }
+            }else if (scheduleDetails.events.length == 0){
                 $('#' + index).append(
-                    '<p>' + scheduleDetails.events[x].name + '</p>'
+                    '<p class="small">This schedule does not have any events!</p>'
                 );
+                
             }
 
         }
