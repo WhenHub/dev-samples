@@ -59,7 +59,7 @@ xhr.addEventListener("readystatechange", function () {
             break;
         }
 
-        // Get media and details for each schedule
+        // Get events for each schedule
         var scheduleMedia = JSON.stringify(false);
 
         var xhr = new XMLHttpRequest();
@@ -69,11 +69,21 @@ xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
             var scheduleDetails = JSON.parse(this.responseText);
             var index = $("a:contains(" + scheduleDetails.name + ")").attr('href').charAt(1);
-            
             if (scheduleDetails.events.length != 0){
                 for (x=0; x < scheduleDetails.events.length; x++){
+                    console.log(scheduleDetails.events[x]);
                     $('#' + index).append(
-                        '<p>' + (x + 1) + '. ' + scheduleDetails.events[x].name + '</p>'
+                        // '<p>' + (x + 1) + '. ' + scheduleDetails.events[x].name + '</p>' +
+                        // '<p>' + scheduleDetails.events[x].when.startDate + '</p>'
+
+
+                        '<div class="list-group">' +
+                            '<div class="list-group-item">' +
+                            '<h5 class="list-group-item-heading">'+ (x + 1) + '. ' + scheduleDetails.events[x].name + '</h5>' +
+                            '<p class="list-group-item-text">' + scheduleDetails.events[x].when.startDate + '</p>' +
+                            '</div>' +
+                        '</div>'                        
+                    
                     );
                 }
             }else if (scheduleDetails.events.length == 0){
@@ -82,11 +92,10 @@ xhr.addEventListener("readystatechange", function () {
                 );
                 
             }
-
         }
         });
 
-        xhr.open("GET", "https://api.whenhub.com/api/schedules/" + jsonResponse[i].id + "?filter%5Binclude%5D%5Bevents%5D=media");
+        xhr.open("GET", "https://api.whenhub.com/api/schedules/" + jsonResponse[i].id + "?filter%5Binclude%5D%5Bevents%5D=media&filter%5Binclude%5D=media");
         // Replace "ACCESS_TOKEN" with your personal one
         xhr.setRequestHeader("authorization", "3hLISQYAANWsxUSSMbmRGT8ypbVA9L6lrrU8nnCNvfadaKYEuOnLtAENlv0h8MVz");
 
