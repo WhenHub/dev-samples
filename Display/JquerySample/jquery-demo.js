@@ -104,7 +104,7 @@ xhr.addEventListener("readystatechange", function () {
 });
 
 xhr.open("GET", "https://api.whenhub.com/api/users/me/schedules");
-xhr.setRequestHeader("authorization", "eo1Id9TYl5J143TPb4OQorm1V7DCLFXA7B5VoezqoOjgO6w9rCXdIGUNTsFM5eTr");
+xhr.setRequestHeader("authorization", "ACCESS_TOKEN");
 
 xhr.send(scheduleData);
 
