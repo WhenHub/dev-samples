@@ -3,8 +3,8 @@ Developer samples
 A collection of examples of how to use the WhenHub API.
 
 ##Access Token
-![Alt text](/imgs/Accesstoken1.png?raw=true "Access Token1")
-![Alt text](/imgs/Accesstoken2.png?raw=true "Access Token2")
+![Alt text](/imgs/Accesstoken1.jpg?raw=true "Access Token1")
+![Alt text](/imgs/Accesstoken2.jpg?raw=true "Access Token2")
 
 ##Documentation & Reference
 
@@ -18,5 +18,5 @@ A collection of examples of how to use the WhenHub API.
 
 
 ##Edit - Angular
-![Alt text](/imgs/AngularExample.pngç?raw=true "Angular Example")
+![Alt text](/imgs/AngularExample.png?raw=true "Angular Example")
 
