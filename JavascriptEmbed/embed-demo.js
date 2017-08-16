@@ -1,6 +1,6 @@
 var wcast = {};
 // Got schedule id from embed page of whencast
-wcast['schedule-id'] = "5978bda1a13ca311e4752e62";        
+wcast['schedule-id'] = "59464f0ec0b33f22e4bcfbb9";        
 wcast['theme'] = 'teal';
 var height = $(window).height() - 100;
 if (height > 800) {
