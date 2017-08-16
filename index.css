@@ -1,3 +1,7 @@
+body {
+    margin-bottom: 60px;
+}
+
 #bannerImg {
   width: 100%;
   background: url('/imgs/banner.jpeg') 50% / cover;
@@ -13,6 +17,12 @@
 h3 {
     margin-left: 150px;
 }
+
+h2 {
+    margin-left: 150px;
+}
+
+
 p {
     margin-left: 150px;
     margin-right: 200px;
