@@ -13,46 +13,50 @@ xhr.addEventListener("readystatechange", function () {
     var jsonResponse = JSON.parse(this.responseText);
 
     for (i = 0; i < jsonResponse.length; i++) {
-        if(i == 0) {        
-            $('.nav-tabs').append(
-                    '<li class="active"><a data-toggle="tab" href="#' + i + '">' + jsonResponse[i].name + '</a></li>'
-                );
-            if (jsonResponse[i].description== undefined){
-                $('.tab-content').append(
-                    '<div id="' + i + '" class="tab-pane fade in active">'+ 
-                    '<blockquote class="small">This schedule does not have a description.</blockquote>' +
-                    '<h4>Events</h4>' + 
-                    '</div>'
-                );
+        if (i < 6){
+            if(i == 0) {        
+                $('.nav-tabs').append(
+                        '<li class="active"><a data-toggle="tab" href="#' + i + '">' + jsonResponse[i].name + '</a></li>'
+                    );
+                if (jsonResponse[i].description== undefined){
+                    $('.tab-content').append(
+                        '<div id="' + i + '" class="tab-pane fade in active">'+ 
+                        '<blockquote class="small">This schedule does not have a description.</blockquote>' +
+                        '<h4>Events</h4>' + 
+                        '</div>'
+                    );
 
-            }else{
-                $('.tab-content').append(
-                    '<div id="' + i + '" class="tab-pane fade in active">'+ 
-                    '<blockquote>' + jsonResponse[i].description + '</blockquote>' +
-                    '<h4>Events</h4>' + 
-                    '</div>'
-                );
+                }else{
+                    $('.tab-content').append(
+                        '<div id="' + i + '" class="tab-pane fade in active">'+ 
+                        '<blockquote>' + jsonResponse[i].description + '</blockquote>' +
+                        '<h4>Events</h4>' + 
+                        '</div>'
+                    );
+                }
             }
-        }
-        else {
-            $('.nav-tabs').append(
-                    '<li><a data-toggle="tab" href="#' + i + '">' + jsonResponse[i].name + '</a></li>'
-            );
-            if (jsonResponse[i].description== undefined){
-                $('.tab-content').append(
-                    '<div id="' + i + '" class="tab-pane fade">' + 
-                    '<blockquote class="small">This schedule does not have a description.</blockquote>' +
-                    '<h4>Events</h4>' + 
-                    '</div>'
+            else {
+                $('.nav-tabs').append(
+                        '<li><a data-toggle="tab" href="#' + i + '">' + jsonResponse[i].name + '</a></li>'
                 );
-            }else{
-                $('.tab-content').append(
-                    '<div id="' + i + '" class="tab-pane fade">' + 
-                    '<blockquote>' + jsonResponse[i].description + '</blockquote>' +
-                    '<h4>Events</h4>' + 
-                    '</div>'
-                );
+                if (jsonResponse[i].description== undefined){
+                    $('.tab-content').append(
+                        '<div id="' + i + '" class="tab-pane fade">' + 
+                        '<blockquote class="small">This schedule does not have a description.</blockquote>' +
+                        '<h4>Events</h4>' + 
+                        '</div>'
+                    );
+                }else{
+                    $('.tab-content').append(
+                        '<div id="' + i + '" class="tab-pane fade">' + 
+                        '<blockquote>' + jsonResponse[i].description + '</blockquote>' +
+                        '<h4>Events</h4>' + 
+                        '</div>'
+                    );
+                }
             }
+        }else {
+            break;
         }
 
         // Get media and details for each schedule
@@ -84,7 +88,7 @@ xhr.addEventListener("readystatechange", function () {
 
         xhr.open("GET", "https://api.whenhub.com/api/schedules/" + jsonResponse[i].id + "?filter%5Binclude%5D%5Bevents%5D=media");
         // Replace "ACCESS_TOKEN" with your personal one
-        xhr.setRequestHeader("authorization", "ACCESS_TOKEN");
+        xhr.setRequestHeader("authorization", "3hLISQYAANWsxUSSMbmRGT8ypbVA9L6lrrU8nnCNvfadaKYEuOnLtAENlv0h8MVz");
 
         xhr.send(scheduleMedia);
 
@@ -104,7 +108,7 @@ xhr.addEventListener("readystatechange", function () {
 });
 
 xhr.open("GET", "https://api.whenhub.com/api/users/me/schedules");
-xhr.setRequestHeader("authorization", "ACCESS_TOKEN");
+xhr.setRequestHeader("authorization", "3hLISQYAANWsxUSSMbmRGT8ypbVA9L6lrrU8nnCNvfadaKYEuOnLtAENlv0h8MVz");
 
 xhr.send(scheduleData);
 
