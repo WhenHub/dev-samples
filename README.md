@@ -6,7 +6,6 @@ For most of the examples, you will need to get an Access Token from your [WhenHu
 
 ## Documentation & Reference
 [WhenHub API Documentation](https://developer.whenhub.com/docs)  
-
 [WhenHub API Reference](https://developer.whenhub.com/v1.0/reference)
 
 ## Javascript Embed
@@ -16,7 +15,10 @@ Embed a public Whencast on any page using Javascript. This is one of the few exm
 
 
 ## Display - Jquery
-Display data on a page using Jquery and styled with standard Bootstrap. The schedules you see are the ones that are in your WhenHub Profile.
+Display data on a page using Jquery and styled with standard Bootstrap. The schedules you see are the ones that are in your WhenHub Profile. It is optimized to run with a local server, run these commands in terminal to start the server:  
+  
+Run `npm install` in  /display/jquerySample folder  
+Run `npm start`
 
 ![Alt text](/imgs/JqueryExample.png?raw=true "Jquery Example")
 
