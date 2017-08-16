@@ -24,7 +24,7 @@ Run `npm start`
 
 
 ## Edit - Angular
-Edit and display data using Angular. The schedules you see are the ones that are in your WhenHub Profile.
+Edit and display data using Angular. The schedules you see are the ones that are in your WhenHub Profile. This example runs on a separate server and port
 
 ![Alt text](/imgs/AngularExample.png?raw=true "Angular Example")
 
