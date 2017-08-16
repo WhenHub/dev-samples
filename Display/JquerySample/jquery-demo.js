@@ -72,7 +72,6 @@ xhr.addEventListener("readystatechange", function () {
                 
                 if (scheduleDetails.events.length != 0){
                     for (x=0; x < scheduleDetails.events.length; x++){
-                        console.log(scheduleDetails.events[x]);
                         $('#' + index).append(
 
                             '<div class="list-group">' +
@@ -96,7 +95,7 @@ xhr.addEventListener("readystatechange", function () {
 
         xhr.open("GET", "https://api.whenhub.com/api/schedules/" + jsonResponse[i].id + "?filter%5Binclude%5D%5Bevents%5D=media&filter%5Binclude%5D=media");
         // Replace "ACCESS_TOKEN" with your personal one
-        xhr.setRequestHeader("authorization", "3hLISQYAANWsxUSSMbmRGT8ypbVA9L6lrrU8nnCNvfadaKYEuOnLtAENlv0h8MVz");
+        xhr.setRequestHeader("authorization", "<<ACCESS_TOKEN>>");
 
         xhr.send(scheduleMedia);
 
@@ -107,7 +106,9 @@ xhr.addEventListener("readystatechange", function () {
 });
 
 xhr.open("GET", "https://api.whenhub.com/api/users/me/schedules");
-xhr.setRequestHeader("authorization", "3hLISQYAANWsxUSSMbmRGT8ypbVA9L6lrrU8nnCNvfadaKYEuOnLtAENlv0h8MVz");
+// Replace "ACCESS_TOKEN" with your personal one
+
+xhr.setRequestHeader("authorization", "<<ACCESS_TOKEN>>");
 
 xhr.send(scheduleData);
 
