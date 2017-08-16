@@ -80,7 +80,9 @@ xhr.addEventListener("readystatechange", function () {
                         '<div class="list-group">' +
                             '<div class="list-group-item">' +
                             '<h5 class="list-group-item-heading">'+ (x + 1) + '. ' + scheduleDetails.events[x].name + '</h5>' +
-                            '<p class="list-group-item-text">' + scheduleDetails.events[x].when.startDate + '</p>' +
+                            '<p class="list-group-item-text">Start Date: ' + scheduleDetails.events[x].when.startDate + '</p>' +
+                            '<p class="list-group-item-text">Number of media items: ' + scheduleDetails.events[x].media.length + '</p>' +
+                            
                             '</div>' +
                         '</div>'                        
                     
