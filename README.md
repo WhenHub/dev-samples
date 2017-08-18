@@ -50,5 +50,13 @@ These samples demonstrate read and edit usage of the WhenHub API
 #### Angular
 Edit and display data using Angular. The schedules you see are the ones that are in your WhenHub Profile.
 
+[View Project Home](https://github.com/WhenHub/dev-samples/tree/master/edit/angularSample)
+
+* List of schedules for user based on Access Token.
+* List of events per each Schedule.
+* Embedded Whencast for each Schedule.
+* Limited display of media objects for Events (images only).
+* Basic editing of title for schedules and events.
+
 ![Alt text](/imgs/AngularExample.png?raw=true "Angular Example")
 
