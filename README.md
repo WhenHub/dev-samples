@@ -21,12 +21,12 @@ Note: _This only installs the developer sample site and a limited number of samp
 ```npm start```
 
 ## Developer Samples
-* Display JavaScript Embed
+* [Display JavaScript Embed](#javascript-embed)
 * API Samples
     * Display (read-only)
-        * jQuery
+        * [jQuery](#jquery)
     * Edit (read &amp; edit)
-        * Angular 4
+        * [Angular 4](#angular)
 
 
 ### Javascript Embed
