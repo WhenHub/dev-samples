@@ -1,23 +1,99 @@
 <!DOCTYPE>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="index.css">
-        <title>Developer Samples</title>
-    </head>
-    <body>
-        <nav id="navMenu"></nav>
-        <div id="bannerImg"></div>
-        <h3>
-            Developer Samples Home Page
-        </h3>
-        <p>Thanks for checking out the WhenHub API! These samples are here to help you see how to work with the API in real setting and to inspire your creativity. The samples are split up into different categories in case you want to see specific functionalities. Click the <b>Display</b> tab if you mainly want to see retrieving information and click the <b>Edit</b> tab if you're more intrested in posting data.   </p>
-        <p>Many of the samples require that you get an Access Token from your WhenHub profile. If you're not sure where to get it, <a href="https://developer.whenhub.com/v1.0/docs/api">these</a> directions will clear things up for you. While you're there, make sure you check out the <a href="https://developer.whenhub.com/v1.0/reference">Reference</a> page, it will be helpful tool as you continue using the API.</p>.
-        <!-- jQuery library  -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="index.js"></script>
-        
-    </body>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Developer Samples</title>
+</head>
+<body>
+<nav id="navMenu"></nav>
+<div id="bannerImg"></div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well">
+                <h3>Display JavaScript Embed</h3>
+                <ul>
+                    <li>JavaScript Embed<br>
+                        <a>Demo</a></li>
+                </ul>
+                <h3>API Samples</h3>
+                <ul>
+                    <li>Display (read-only)
+                        <ul>
+                            <li>jQuery<br>
+                                <a>Demo</a> - <a>View on GitHub</a></li>
+                        </ul>
+                    </li>
+                    <li>Edit (read &amp; edit)
+                        <ul>
+                            <li>Angular 4 <br>
+                                <a>View on GitHub</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>
+                        Developer Samples Home Page
+                    </h3>
+                    <p>Thanks for checking out the WhenHub API! These samples are here to help you see how to work with the API in real setting and to inspire your creativity. The samples are split up into different categories in case you want to see specific functionalities. Click the <b>Display</b> tab if you mainly want to see retrieving information and click the <b>Edit</b> tab if you're more intrested in posting data.   </p>
+                    <p>Many of the samples require that you get an Access Token from your WhenHub profile. If you're not sure where to get it, <a href="https://developer.whenhub.com/v1.0/docs/api">these</a> directions will clear things up for you. While you're there, make sure you check out the <a href="https://developer.whenhub.com/v1.0/reference">Reference</a> page, it will be helpful tool as you continue using the API.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Samples</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Javascript Embed - <a class="small" href="https://github.com/WhenHub/dev-samples/tree/master/JavascriptEmbed">View on GitHub</a></h3>
+
+                    <p>Embed a public Whencast on any page using Javascript. This is one of the few exmamples that does not require an Access Token.</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>jQuery - <a class="small" href="https://github.com/WhenHub/dev-samples/tree/master/Display/JquerySample">View on GitHub</a></h3>
+
+                    <p>jQuery things </p>
+                    <ul>
+                        <li>List of names of schedules for user based on Access Token.</li>
+                        <li>List of events with basic information per each Schedule.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Angular 4 - <a class="small" href="https://github.com/WhenHub/dev-samples/tree/master/edit/angularSample">View on GitHub</a></h3>
+
+                    <p>This is a sample using Angular 4. The sample includes the following features: </p>
+                    <ul>
+                        <li>List of schedules for user based on Access Token.</li>
+                        <li>List of events per each Schedule.</li>
+                        <li>Embedded Whencast for each Schedule.</li>
+                        <li>Limited display of media objects for Events (images only).</li>
+                        <li>Basic editing of title for schedules and events.</li>
+
+                    </ul>
+                    Edit and display data using Angular. The schedules you see are the ones that are in your WhenHub Profile.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery library  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="index.js"></script>
+
+</body>
 </html>

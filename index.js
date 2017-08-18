@@ -16,15 +16,6 @@ document.getElementById("navMenu").innerHTML =
                         "<li class='third-a-item'><a href='/display/jquerySample/jquery-demo.html'>Jquery Sample</a></li>" +
                     "</ul>" +
                 "</li>" +
-                "<li class='fourth-item dropdown'>" +
-                    "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>Edit Samples" +
-                    "<span class='caret'></span></a>" +
-                    "<ul class='dropdown-menu'>" + 
-                        "<li class='fourth-a-item'><a href='/edit/angularSample/angularsample-demo.html'>Angular Sample</a></li>" +
-                    "</ul>" +
-                "</li>" +
             "</ul>" +
         "</div>" +
-    "</nav>" 
-
-
+    "</nav>";
