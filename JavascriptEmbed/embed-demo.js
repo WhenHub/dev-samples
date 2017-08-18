@@ -6,11 +6,8 @@ var height = $(window).height() - 100;
 if (height > 800) {
   height = 800;
 }
-// if you are running local host use this code
-$('#sample').html('<div data-whencast="test" data-viz-url-base="https://viz.whenhub.com/" data-app-url-base="https://studio.whenhub.com/" data-api-url-base="https://api.whenhub.com/api/" style="height:' + height + 'px;"></div>');
 
-// otherwise use this code
-// $('#sample').html('<div data-whencast="test" style="height:' + height + 'px;"></div>');
+$('#sample').html('<div data-whencast="test" data-viz-url-base="https://viz.whenhub.com/" data-app-url-base="https://studio.whenhub.com/" data-api-url-base="https://api.whenhub.com/api/" style="height:' + height + 'px;"></div>');
 
 // select where to place whencast
 var node = document.querySelector('div[data-whencast="test"]');
