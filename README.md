@@ -32,6 +32,9 @@ Note: _This only installs the developer sample site and a limited number of samp
 ### Javascript Embed
 Embed a public Whencast on any page using Javascript. This is one of the few examples that does not require an Access Token. 
 
+[View Project Home](https://github.com/WhenHub/dev-samples/tree/master/JavascriptEmbed)
+
+
 ![Alt text](/imgs/JSEmbedExample.png?raw=true "JS Embed Example")
 
 
@@ -40,6 +43,9 @@ These samples demonstrate read-only usage of the WhenHub API.
 
 #### Jquery
 Display data on a page using Jquery and styled with standard Bootstrap. The schedules you see are the ones that are in your WhenHub Profile.
+
+[View Project Home](https://github.com/WhenHub/dev-samples/tree/master/Display/JquerySample)
+
 
 ![Alt text](/imgs/JqueryExample.png?raw=true "Jquery Example")
 
