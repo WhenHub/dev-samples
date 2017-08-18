@@ -99,7 +99,7 @@ xhr.addEventListener("readystatechange", function () {
             });
 
             xhr.open("GET", "https://api.whenhub.com/api/schedules/" + jsonResponse[i].id + "?filter[include]=media&filter[include][events]=media");
-            xhr.setRequestHeader("authorization", accsss_token);
+            xhr.setRequestHeader("authorization", access_token);
 
             xhr.send(scheduleMedia);
 
@@ -111,6 +111,6 @@ xhr.addEventListener("readystatechange", function () {
 
 xhr.open("GET", "https://api.whenhub.com/api/users/me/schedules");
 
-xhr.setRequestHeader("authorization", accsss_token);
+xhr.setRequestHeader("authorization", access_token);
 
 xhr.send(scheduleData);
