@@ -1,7 +1,6 @@
 // Use your access token from your studio profile page
 // https://studio.whenhub.com/account
-// var access_token = '<<YOUR ACCESS TOKEN>>';
-var accsss_token = 'piOFiUA721nfL6vuBCDHu2eGBhjheKSai9U9IcakRjsFgkcEwLDENDdxvg5SPDIN';
+var access_token = '<<YOUR ACCESS TOKEN>>';
 
 // Highlight correct nav item
 $('.active').removeClass();
