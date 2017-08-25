@@ -4,8 +4,7 @@ class Whencast extends Component {
         let data = this.props.data;
         console.log(data);
         return(
-            <div>
-                <h1>Whencasts!</h1>
+            <div className="row">
                 {data.map(function(whencast) {
                     return (
                         <div key={whencast.id} className="card">
