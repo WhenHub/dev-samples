@@ -13,9 +13,15 @@ class Whencast extends Component {
                             ) : (
                                 <img src="https://cdn.whenhub.com/img/logo/logo-square.png" alt="placeholder"/>
                             )}
-                            <div class="container">
+                            <div className="container">
                                 <h4><b>{whencast.name}</b></h4> 
-                                <p>{whencast.description}</p> 
+                                <div className="description">
+                                    {whencast.description ? (
+                                        <p>{whencast.description}</p>
+                                    ) : (
+                                        <p>This whencast does not have a description</p>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     );
