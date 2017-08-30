@@ -34,11 +34,19 @@ margin-left: 10px;
 
 .edit-container img {
   width: 30%;
-  margin-left: 480px;
+  margin-left: 500px;
 }
 
 .edit-container .form {
-  padding-left: 600px;
+  text-align: center;
+  padding-left: 530px;
+}
+
+.edit-container form {
+  width: 40%;
+  padding: 8px;
+  background-color: #DCDCDC;  
+  border-radius: 10px;
 }
 
 
