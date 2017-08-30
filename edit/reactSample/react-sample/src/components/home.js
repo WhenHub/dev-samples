@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Whencast from './whencast.js';
 
+window.accesstoken = "LEnX1JDgECCh4B7PuEqy3SMSiUkbjHXKeKleyKzDBbbYyOO9ZloBfEWALkGjEz20"
+
 class Home extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-        accessToken: "LEnX1JDgECCh4B7PuEqy3SMSiUkbjHXKeKleyKzDBbbYyOO9ZloBfEWALkGjEz20", 
+        accessToken: window.accesstoken, 
         whencastIds: [],
         whencasts: []
         }

@@ -27,36 +27,38 @@ import {
                     <Link to='/'>Back To My Whencasts</Link>
                 </div>
                 <img src={this.state.whencast.img} alt={this.state.whencast.name}/>
-                <Form
-                    onSubmit={(values) => {
-                    console.log('Success!', values)
-                    let url = `https://api.whenhub.com/api/schedules/${this.props.match.params.id}`
-                    this.updateWhencast(url, values);
-                    }}
-                    validate={values => {
-                        const { name, description } = values
-                        return {
-                        name: !name ? 'A name is required' : undefined,
-                        description: !description ? 'A description is required' : undefined,
-                        }
-                    }}
-                    postSubmit={(values) => {
-                        
-                    }}
-                >
-                    {({submitForm}) => {
-                        return (
-                            <form onSubmit={submitForm}>
-                                <label>Name: </label>
-                            <Text placeholder={this.state.whencast.name} field='name' />
-                            <label>Description: </label>
+                    <div className="form">
+                        <Form
+                            onSubmit={(values) => {
+                            console.log('Success!', values)
+                            let url = `https://api.whenhub.com/api/schedules/${this.props.match.params.id}`
+                            this.updateWhencast(url, values);
+                            }}
+                            validate={values => {
+                                const { name, description } = values
+                                return {
+                                name: !name ? 'A name is required' : undefined,
+                                description: !description ? 'A description is required' : undefined,
+                                }
+                            }}
+                            postSubmit={(values) => {
+                                
+                            }}
+                        >
+                            {({submitForm}) => {
+                                return (
+                                    <form onSubmit={submitForm}>
+                                        <label>Name: </label>
+                                    <Text placeholder={this.state.whencast.name} field='name' />
+                                    <label>Description: </label>
 
-                            <Textarea placeholder={this.state.whencast.description} field='description' />
-                            <button type='submit'>Submit</button>
-                            </form>
-                        )
-                    }}
-                </Form>
+                                    <Textarea placeholder={this.state.whencast.description} field='description' />
+                                    <button type='submit'>Submit</button>
+                                    </form>
+                                )
+                            }}
+                        </Form>
+                    </div>
             </div>
       
           )
@@ -67,7 +69,7 @@ import {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': "LEnX1JDgECCh4B7PuEqy3SMSiUkbjHXKeKleyKzDBbbYyOO9ZloBfEWALkGjEz20"
+                'Authorization': window.accesstoken
             },
             body: JSON.stringify(
                 {
@@ -89,7 +91,7 @@ import {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': "LEnX1JDgECCh4B7PuEqy3SMSiUkbjHXKeKleyKzDBbbYyOO9ZloBfEWALkGjEz20"
+                'Authorization': window.accesstoken
             }
             })
             .then((res) => res.json()).then((data) => {
