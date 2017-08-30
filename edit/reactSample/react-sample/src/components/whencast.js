@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
+import {
+  Link
+} from 'react-router-dom'
+
 class Whencast extends Component {
     render() {
         let data = this.props.data;
-        console.log(data);
         return(
             <div className="row">
+                <h1>My Whencasts</h1>
                 {data.map(function(whencast) {
                     return (
                         <div key={whencast.id} className="card">
                             {whencast.media.length > 0 ? (
-                                <img src={whencast.media[0].url} alt="Avatar"/>
+                                <img src={whencast.media[0].url} alt={whencast.name}/>
                             ) : (
                                 <img src="https://cdn.whenhub.com/img/logo/logo-square.png" alt="placeholder"/>
                             )}
@@ -21,6 +25,9 @@ class Whencast extends Component {
                                     ) : (
                                         <p>This whencast does not have a description</p>
                                     )}
+                                        <div className="edit-link">
+                                            <Link to={`/edit/${whencast.id}`}>Edit</Link>
+                                        </div>
                                 </div>
                             </div>
                         </div>
