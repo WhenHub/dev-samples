@@ -35,6 +35,7 @@ body {
 
 .card img {
   width: 90%;
+  margin-left: 15px;
 }
 
 .card h4{
