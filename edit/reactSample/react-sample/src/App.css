@@ -27,33 +27,41 @@
   font-size: 17px;
 }
 .edit-container .back-link{
-text-align: left; 
-margin-top: 10px;
-margin-left: 10px;
+  text-align: left; 
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .edit-container .edit-img{
-  padding-left: 450px;
   padding-top: 30px;
   padding-bottom: 50px;
 }
 .edit-container img {
-  width: 500px;
+  width: 300px;
   height: auto;
   border-radius: 1%;
+  display: block;
+  margin: auto;
   box-shadow: 0px 0px 46px -5px rgba(0,0,0,0.75);
 }
 
 .edit-container .form {
   text-align: center;
-  padding-left: 530px;
 }
 
 .edit-container form {
-  width: 40%;
+  display: block;
+  margin: auto;
+  width: 323px;
   padding: 8px;
   background-color: #DCDCDC;  
   border-radius: 10px;
+}
+
+.events {
+  margin-right: 90px;
+  margin-left: 90px;
+  margin-bottom: 70px;
 }
 
 

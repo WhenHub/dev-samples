@@ -12,7 +12,8 @@ import {
                 whencast: {
                     name: "",
                     description: "",
-                    img: ""
+                    img: "",
+                    events: []
                 },
                 update: {
                     name: "",
@@ -61,6 +62,19 @@ import {
                             }}
                         </Form>
                     </div>
+                    <div className="events">
+                        <h3>Events</h3>
+                        <dl>
+                            {this.state.whencast.events.map(function(event){
+                                return (
+                                    <div key={event.id}className="event-list-item">
+                                        <dt>{event.name}</dt>
+                                        <dd>{event.description.replace(/(<([^>]+)>)/ig,"")}</dd>
+                                    </div>
+                                )
+                            })}
+                        </dl> 
+                    </div>
             </div>
       
           )
@@ -103,7 +117,8 @@ import {
                         whencast: {
                             name: this.state.whencast.name.concat(data.name), 
                             description: this.state.whencast.description.concat(data.description),
-                            img: this.state.whencast.img.concat(data.media[0].url)
+                            img: this.state.whencast.img.concat(data.media[0].url),
+                            events: this.state.whencast.events.concat(data.events)
                         }
                     })
                 }else{
@@ -111,7 +126,8 @@ import {
                         whencast: {
                             name: this.state.whencast.name.concat(data.name), 
                             description: this.state.whencast.description.concat(data.description),
-                            img: this.state.whencast.img.concat("https://cdn.whenhub.com/img/logo/logo-square.png")
+                            img: this.state.whencast.img.concat("https://cdn.whenhub.com/img/logo/logo-square.png"),
+                            events: this.state.whencast.events.concat(data.events)
                         }
                     })
                 }
