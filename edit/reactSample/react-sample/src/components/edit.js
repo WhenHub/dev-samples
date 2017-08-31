@@ -65,9 +65,10 @@ import {
                     <div className="events">
                         <h3>{this.state.whencast.name}'s Events</h3>
                             {this.state.whencast.events.map(function(event){
+                                console.log(event)
                                 return (
                                     <div key={event.id}className="card">
-                                            {event.media[0].type === "image" ? (
+                                            {event.media.length > 0 && event.media[0].type === "image" ? (
                                                 <div className="card-img">
                                                     <img src={event.media[0].url} alt={event.media.name}/>
                                                 </div>
