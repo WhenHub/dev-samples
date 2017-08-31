@@ -26,7 +26,9 @@ import {
                 <div className="back-link">
                     <Link to='/'>Back To My Whencasts</Link>
                 </div>
-                <img src={this.state.whencast.img} alt={this.state.whencast.name}/>
+                <div className="edit-img">
+                    <img src={this.state.whencast.img} alt={this.state.whencast.name}/>
+                </div>
                     <div className="form">
                         <Form
                             onSubmit={(values) => {
