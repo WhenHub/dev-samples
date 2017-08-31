@@ -27,6 +27,7 @@ Note: _This only installs the developer sample site and a limited number of samp
         * [jQuery](#jquery)
     * Edit (read &amp; edit)
         * [Angular 4](#angular)
+        * [React JS](#react)
 
 
 ### Javascript Embed
