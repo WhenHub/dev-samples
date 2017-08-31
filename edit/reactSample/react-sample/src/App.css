@@ -36,7 +36,7 @@
   padding-top: 30px;
   padding-bottom: 50px;
 }
-.edit-container img {
+.edit-container .edit-img img {
   width: 300px;
   height: auto;
   border-radius: 1%;
@@ -45,14 +45,22 @@
   box-shadow: 0px 0px 46px -5px rgba(0,0,0,0.75);
 }
 
-.edit-container .form {
-  text-align: center;
+.FormInput input {
+  width: 95%;
+  height: 15px;
+  font-size: 15px;
+}
+
+.FormInput textarea {
+  width: 95%;
+  height: 80px;
+  font-size: 15px;
 }
 
 .edit-container form {
   display: block;
   margin: auto;
-  width: 323px;
+  width: 423px;
   padding: 8px;
   background-color: #DCDCDC;  
   border-radius: 10px;
@@ -62,6 +70,15 @@
   margin-right: 90px;
   margin-left: 90px;
   margin-bottom: 70px;
+}
+
+.event-list-item {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.events h3 {
+  margin-left: 40px;
 }
 
 

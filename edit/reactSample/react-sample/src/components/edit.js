@@ -63,17 +63,22 @@ import {
                         </Form>
                     </div>
                     <div className="events">
-                        <h3>Events</h3>
-                        <dl>
+                        <h3>{this.state.whencast.name}'s Events</h3>
                             {this.state.whencast.events.map(function(event){
                                 return (
-                                    <div key={event.id}className="event-list-item">
-                                        <dt>{event.name}</dt>
-                                        <dd>{event.description.replace(/(<([^>]+)>)/ig,"")}</dd>
+                                    <div key={event.id}className="card">
+                                            {event.media.length > 0 ? (
+                                                <img src={event.media[0].url} alt={event.media.name}/>
+                                            ) : (
+                                                <img src="https://cdn.whenhub.com/img/logo/logo-square.png" alt="placeholder"/>
+                                            )}
+                                         <div className="container">
+                                            <h4>{event.name}</h4>
+                                            <div className="description"><p>{event.description.replace(/(<([^>]+)>)/ig,"")}</p></div>
+                                        </div>
                                     </div>
                                 )
                             })}
-                        </dl> 
                     </div>
             </div>
       
