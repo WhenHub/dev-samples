@@ -67,7 +67,7 @@ import {
                             {this.state.whencast.events.map(function(event){
                                 return (
                                     <div key={event.id}className="card">
-                                            {event.media.length > 0 ? (
+                                            {event.media[0].type === "image" ? (
                                                 <div className="card-img">
                                                     <img src={event.media[0].url} alt={event.media.name}/>
                                                 </div>
