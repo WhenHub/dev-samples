@@ -66,3 +66,13 @@ Edit and display data using Angular. The schedules you see are the ones that are
 
 ![Alt text](/imgs/AngularExample.png?raw=true "Angular Example")
 
+#### React
+Edit and display using React.js. The schedules you see are the ones that are in your WhenHub Profile. 
+
+[View Project Home](https://github.com/WhenHub/dev-samples/tree/master/edit/reactSample/react-sample)
+
+* List of schedules, with images, name and description for user based on Access Token.
+* Edit name and description for each schedule.
+* List event name and description of each schedule.
+
+![Alt text](/imgs/reactExample.png?raw=true "React Example") 
