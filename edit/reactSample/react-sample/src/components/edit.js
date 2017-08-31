@@ -68,13 +68,19 @@ import {
                                 return (
                                     <div key={event.id}className="card">
                                             {event.media.length > 0 ? (
-                                                <img src={event.media[0].url} alt={event.media.name}/>
+                                                <div className="card-img">
+                                                    <img src={event.media[0].url} alt={event.media.name}/>
+                                                </div>
                                             ) : (
-                                                <img src="https://cdn.whenhub.com/img/logo/logo-square.png" alt="placeholder"/>
+                                                <div className="card-img">
+                                                    <img src="https://cdn.whenhub.com/img/logo/logo-square.png" alt="placeholder"/>
+                                                </div>
                                             )}
                                          <div className="container">
                                             <h4>{event.name}</h4>
-                                            <div className="description"><p>{event.description.replace(/(<([^>]+)>)/ig,"")}</p></div>
+                                            <div className="description">
+                                                <p>{event.description.replace(/(<([^>]+)>)/ig,"")}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 )

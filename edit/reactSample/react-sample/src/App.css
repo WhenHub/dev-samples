@@ -118,6 +118,12 @@
   margin-left: 15px;
 }
 
+.card-img {
+  margin: 9px;
+  max-height: 275px; 
+  overflow: hidden;
+}
+
 .card h4{
   margin-top: 5px;
   margin-bottom: 5px;
@@ -128,6 +134,8 @@
 }
 
 .card p {
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 35px;
   overflow: hidden;
 }
